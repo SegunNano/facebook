@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/all.css">
+    <title>Facebook</title>
+    <style>
+        #mainCon {
+            height: 600px;
+            width: 700px;
+            align-items: center;
+            align-content: center;
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 150px;
+            background-color: beige;
+            justify-content: center;
+        }
+        .text {
+            width: 50px;
+        }
+        #tagsCon {
+            display: flex;
+            height: 50px;
+            width: 630px;
+            flex-direction: row;
+            justify-content: space-around;
+            justify-items: center;
+            align-items: center;
+            border-bottom: 1px solid gray;
+        }
+        p {
+            margin: 0px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: gray;
+            font-size: small;
+        }
+        body {
+            background-color: rgb(239, 239, 245);
+        }
+        #con1, #postCon, #roomCon {
+            background-color: white;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .picCon {
+            height: 200px;
+            width: 113px;
+            border-radius: 10px;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 2px 2px 5px gray;
+            margin-left: 10px;
+        }
+        #con2 {
+            width: 630px;
+            overflow: hidden;
+        }
+        #storiesCon {
+            display: inline-flex;
+            height: 250px;
+            align-content: center;
+            align-items: center;
+            flex-flow: nowrap;
+            overflow: hidden;
+            flex-direction: row;
+            width: 870px;
+            position: relative;
+        }
+        #story1 {
+            background-image: url(status1.jpg);
+        }
+        #story2 {
+            background-image: url(status2.jpeg);
+        }
+        #story3 {
+            background-image: url(status3.jpg);
+        }
+        #story4 {
+            background-image: url(status4.jpeg);
+        }
+        #story5 {
+            background-image: url(status5.jpeg);
+        }
+        #story6 {
+            background-image: url(status6.jpeg);
+        }
+        #profile {
+            background-image: url(profile.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 160px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        #profileCon {
+            height: 40px;
+            background-color: white;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            align-content: center;
+            align-items: center;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .dp {
+            height: 30px;
+            width: 30px;
+            border-radius: 30px;
+            border: 5px solid;
+            border-color: blue;
+            background-position: center;
+            background-size: cover;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        #dp1 {
+            background-image: url(status1dp.jpeg);
+        }
+        #dp2 {
+            background-image: url(status2dp.jpeg);
+        }
+        #dp3 {
+            background-image: url(status3dp.jpeg);
+        }
+        #dp4 {
+            background-image: url(status4dp.jpeg);
+        }
+        #dp5 {
+            background-image: url(status5dp.jpeg);
+        }
+        #dp6 {
+            background-image: url(status6dp.jpeg);
+        }
+        .dp+p {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            align-self: baseline;
+            overflow-wrap: break-word;
+            margin-top: 120px;
+            margin-left: 10px;
+            color: white;
+        }
+        .fa-plus-circle {
+            font-size: 25px;
+            color: blue;
+            margin-top: 5px;
+        }
+        #fa {
+            height: 35px;
+            width: 35px;
+            background-color: white;
+            border: 30px;
+            text-align: center;
+            margin-top: -15px;
+            padding-bottom: 5px;
+            justify-content: center;
+            border-radius: 35px;
+        }
+        #postCon {
+            width: 530px;
+            height: 110px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #subpostCon1, #subpostCon2 {
+            width: 490px;
+            height: 54px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        #subpostCon1 {
+            border-bottom: 2px solid rgb(230, 221, 221);
+            justify-content: space-between;
+        }
+        #subpostCon2 {
+            justify-content: space-around;
+        }
+        #dp7, #dp8, #dp9, #dp10, #dp11, #dp12, #dp13 {
+            height: 35px;
+            width: 35px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 40px;
+        }
+        #dp8, #dp9, #dp10, #dp11, #dp12, #dp13 {
+            margin-left: 20px;
+        }
+        #dp7 {
+            background-image: url(profile.jpeg);
+        }
+        #dp8 {
+            background-image: url(status2dp.jpeg);
+        }
+        #dp9 {
+            background-image: url(status3dp.jpeg);
+        }
+        #dp10 {
+            background-image: url(status4dp.jpeg);
+        }
+        #dp11 {
+            background-image: url(status5dp.jpeg);
+        }
+        #dp12 {
+            background-image: url(status6dp.jpeg);
+        }
+        #dp13 {
+            background-image: url(status1dp.jpeg);
+        }
+        input {
+            font-family: sans-serif;
+            font-size: large;
+            border-radius: 25px;
+            background-color: rgb(230, 221, 221);
+            height: 35px;
+            width: 440px;
+            border: none;
+        }
+        .activity {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            align-items: center;
+        }
+        .fa-video, .fa-panorama, .fa-face-grin,.fa-camera {
+        font-size: 20px;
+        margin-right: 8px;
+    }
+        .fa-video {
+            color: red;
+        }
+        .fa-panorama {
+            color: rgb(10, 179, 32);
+        }
+        .fa-face-grin {
+            color: yellow;
+        }
+        #roomCon {
+            width: 530px;
+            height: 60px;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            align-items: center;
+            justify-content: space-between;
+        }
+        button {
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            background-color: white;
+            border-radius: 20px;
+            border: none;
+            box-shadow: 1px 1px 5px gray;
+            margin-left: 20px;
+            width: 150px;
+        }
+        button:hover, #next1:hover, #next2:hover {
+            background-color: rgb(184, 184, 184);
+        }
+        #cRoomDp {
+            display: flex;
+            flex-direction: row;
+            margin-right: 5px;
+            align-items: center;
+            position: relative;
+        }
+        #next1, #next2 {
+            background-color: white;
+            position: absolute;
+            z-index: 10;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            box-shadow: 1px 1px 5px black;
+        }
+        #next1 {
+            left: 600px;
+            height: 30px;
+            width: 30px;
+            border-radius: 30px;
+        }
+        #next2 {
+            left: 250px;
+            height: 40px;
+            width: 40px;
+            border-radius: 50px;
+        }
+        .fa-angle-right {
+            font-size: 20px;
+        }
+        .fa-arrow-right {
+            font-size: 15px;
+        }
+    </style>
+        
+</head>
+<body>
+    <div id="mainCon">
+        <div id="con1">
+            <div id="tagsCon">
+                <div class="text"><p >Stories</p></div>
+                <div class="text"><p>Reels</p></div>
+                <div class="text"><p>Rooms</p></div>
+            </div>
+            <div id="con2">
+                <div id="storiesCon">
+                    <div class="picCon">
+                        <div id="profile"></div>
+                        <div id="profileCon">
+                            <div id="fa">
+                                <i class="fa fa-plus-circle"></i>
+                            </div>
+                            <p>Create Story</p>
+                        </div>
+                    </div>
+                    <div id="story1" class="picCon">
+                        <div class="dp" id="dp1"></div>
+                        <p>Bazzik T</p>
+                    </div>
+                    <div id="story2" class="picCon">
+                        <div class="dp" id="dp2"></div>
+                        <p>Tottenham Hotspur</p>
+                    </div>
+                    <div id="story3" class="picCon">
+                        <div class="dp" id="dp3"></div>
+                        <p>Micah Elliott</p>
+                    </div>
+                    <div id="story4" class="picCon">
+                        <div class="dp" id="dp4"></div>
+                        <p>Bee Cee</p>
+                    </div>
+                    <div id="story5" class="picCon">
+                        <div class="dp" id="dp5"></div>
+                        <p>Saturn 9</p>
+                    </div>
+                    <div id="story6" class="picCon">
+                        <div class="dp" id="dp6"></div>
+                        <p>Bass Bishop</p>
+                    </div>
+                    <div id="next1">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="postCon">
+            <div id="subpostCon1">
+                <div id="dp7"></div>
+                <input type="text" placeholder="  What's on your mind, Raphael?">
+            </div>
+            <div id="subpostCon2">
+                <div class="activity">
+                    <i class="fas fa-video"></i>
+                    <div><p>Live Video</p></div>
+                </div>
+                <div class="activity">
+                    <i class="fas fa-panorama"></i>
+                    <div><p>Photo/video</p></div>
+                </div>
+                <div class="activity">
+                    <i class="far fa-face-grin"></i>
+                    <div><p>Feeling/activity</p></div>
+                </div>
+            </div>
+        </div>
+        <div id="roomCon">
+            <div class="cRoom">
+                <button>
+                    <i class="fa-solid fa-camera"></i>
+                    <div><p>Create room</p></div>
+                </button>
+            </div>
+            <div id="cRoomDp">
+                <div id="dp8"></div>
+                <div id="dp9"></div>
+                <div id="dp10"></div>
+                <div id="dp11"></div>
+                <div id="dp12"></div>
+                <div id="dp13"></div>
+                <div id="next2">
+                    <i class="fas fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
